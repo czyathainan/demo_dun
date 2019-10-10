@@ -40,7 +40,7 @@
 		echo "您输入的内容：".$user_name;
 		
 		//注意: $tncodeDuplikey 只能使用1次
-		$result	= file_get_contents("https://api.jiayyy.com/v1/dun/validate?tncode_uplikey={$tncodeDuplikey}");
+		$result	= file_get_contents("https://api.jiayyy.com/v1/dun/validate?tncode_duplikey={$tncodeDuplikey}");
 		echo "<br />拼图验证结果：".$result;
 		
 		if($result == 'ok')
