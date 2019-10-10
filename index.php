@@ -13,7 +13,7 @@
 </style>
 
 <?php
-	$randString	= str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_'); //唯一id
+	$randString	= str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_'); //唯一id,不少于35位
 ?>
 <form method="POST" name="testForm" action="." style="width:300px; margin:0 auto;">
 	<table>
@@ -25,8 +25,8 @@
 		</tr>
 	</table>
 	<p>&nbsp; </p>
-	<input type="hidden" name="tncodeDuplikey" value="<?=$randString;?>" />
-	<input type="button" value="提 交" class="tncodeBtn" style="display:block; margin:0 auto;" />
+	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" />
+	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" />
 </form>
 
 <div style="width:300px; margin:0 auto;">
@@ -34,13 +34,13 @@
 	if(isset($_POST['user_name']))
 	{
 		$user_name		= $_POST['user_name'];
-		$tncodeDuplikey	= $_POST['tncodeDuplikey'];
+		$stcodeDuplikey	= $_POST['stcodeDuplikey'];
 		
 		echo "<p>&nbsp; </p>";
 		echo "您输入的内容：".$user_name;
 		
-		//注意: $tncodeDuplikey 只能使用1次
-		$result	= file_get_contents("https://api.jiayyy.com/v1/dun/validate?tncode_duplikey={$tncodeDuplikey}");
+		//注意: $stcodeDuplikey 只能使用1次
+		$result	= file_get_contents("https://api.jiayyy.com/v1/dun/validate?stcode_duplikey={$stcodeDuplikey}");
 		echo "<br />拼图验证结果：".$result;
 		
 		if($result == 'ok')
