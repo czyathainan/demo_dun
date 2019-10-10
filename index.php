@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>滑动拼图完成验证接口 - 测试</title>
-    <link href="http://api.jiayyy.com/css/dun_stcode.css?v=1.1" rel="stylesheet">
+    <link href="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_css/dun_stcode.css?v=1.1" rel="stylesheet">
 </head>
 <body>
 <p>&nbsp; </p><p>&nbsp; </p>
