@@ -5,5 +5,7 @@
 测试请直接访问 index.php 即可。
 
 接口共2个URL，文档省略，见示例代码。
+
 1.获取验证码图片url: http://api.jiayuan.com/dun_puzzle.php?stcode_duplikey=客户端唯一id
+
 2.验证客户端是否完成拼图: http://api.jiayyy.com/v1/dun/check-puzzle?tn_r=169&stcode_duplikey=客户端唯一id
