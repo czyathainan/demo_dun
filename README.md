@@ -6,3 +6,6 @@
 你需要用的只有1个如下URL，文档省略，见示例代码index.php。
 
 1.服务器端验证客户端是否完成拼图（输出yes表示通过）: https://api.jiayyy.com/v1/dun/validate?stcode_duplikey=客户端唯一id
+
+
+示例代码是php的，同样支持其他编程语言，见示例代码的原理（示例代码很简短，文档就省略了）。
