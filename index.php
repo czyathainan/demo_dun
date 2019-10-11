@@ -55,8 +55,11 @@
 </div>
 
 <script type="text/javascript">
-//拼图成功后会执行 dunSuccess() 函数
-function dunSuccess()
+//获取拼图验证码url
+var netStCodeUrl	= '/net_stcode.php';
+
+//拼图成功后会执行 stcodeSuccess() 函数
+function stcodeSuccess()
 {
 	if(!document.getElementsByName('user_name')[0].value)
 	{
@@ -68,7 +71,7 @@ function dunSuccess()
 	document.testForm.submit();
 }
 </script>
-<script src="http://api.jiayyy.com/js/net_stcode.js?v=1.1"></script>
+<script src="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_js/net_stcode.js?v=1.1"></script>
 
 </body>
 </html>
