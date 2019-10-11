@@ -25,7 +25,9 @@
 		</tr>
 	</table>
 	<p>&nbsp; </p>
-	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" />
+	
+	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" /><!--必须有！！！-->
+	
 	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" />
 </form>
 
