@@ -2,10 +2,7 @@
 
 请将 dun_puzzle.php 文件放到你网站的根目录下，否则验证码图片会无法显示；
 
-测试请直接访问 index.php 即可。
+本地测试请直接访问 index.php 即可。
+你需要用的只有1个如下URL，文档省略，见示例代码index.php。
 
-接口共2个URL，文档省略，见示例代码。
-
-1.获取验证码图片: https://api.jiayuan.com/dun_puzzle.php?stcode_duplikey=客户端唯一id
-
-2.服务器端验证客户端是否完成拼图: https://api.jiayyy.com/v1/dun/validate?stcode_duplikey=客户端唯一id
+1.服务器端验证客户端是否完成拼图（输出yes表示通过）: https://api.jiayyy.com/v1/dun/validate?stcode_duplikey=客户端唯一id

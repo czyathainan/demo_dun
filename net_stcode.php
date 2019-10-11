@@ -4,4 +4,4 @@
 */
 $t					= isset($_GET['t']) ? $_GET['t'] : '';
 $stcode_duplikey	= isset($_GET['stcode_duplikey']) ? $_GET['stcode_duplikey'] : '';
-echo file_get_contents("https://api.jiayyy.com/v1/dun/puzzle?t={$t}&stcode_duplikey={$stcode_duplikey}");
+echo file_get_contents("https://api.jiayyy.com/v1/dun/net-stcode?t={$t}&stcode_duplikey={$stcode_duplikey}");
