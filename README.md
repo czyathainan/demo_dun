@@ -7,9 +7,13 @@
 
 1.服务器端验证客户端是否完成拼图（输出yes表示通过）: 
 https://api.jiayyy.com/v1/dun/validate?stcode_duplikey=客户端唯一id
+
 响应格式：json
+
 响应示例：{"status":0, "message":"key长度不能少于35位"}
+
 status	: 取值 0 | 1, 为1表示验证通过
+
 message	: 错误提示消息
 
 
