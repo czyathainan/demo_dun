@@ -44,11 +44,14 @@
 		//注意: $stcodeDuplikey 只能使用1次
 		$result	= file_get_contents("https://api.jiayyy.com/v1/dun/validate?stcode_duplikey={$stcodeDuplikey}");
 		echo "<br />拼图验证结果：".$result;
-		
-		if($result == 'ok')
+		$result	= json_decode($result, true);
+		if($result['status'] == 1)
 		{
 			//执行数据库操作...
-			
+		}
+		else
+		{
+			echo "拼图验证失败: ".$result['message'];
 		}
 	}
 ?>
