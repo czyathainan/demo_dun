@@ -7,7 +7,6 @@
     <link href="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_css/net_stcode.css?v=1.1" rel="stylesheet">
 </head>
 <body>
-<p>&nbsp; </p><p>&nbsp; </p>
 <style type="text/css">
 	table tr td{padding:8px;}
 </style>
