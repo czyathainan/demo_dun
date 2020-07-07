@@ -27,7 +27,7 @@
 	
 	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" /><!--必须有！！！-->
 	
-	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" />
+	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" /><!-- class="stcodeBtn"有点击事件监听，不要改名哦 -->
 </form>
 
 <div style="width:300px; margin:0 auto;">
