@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>滑动拼图完成验证接口 - 测试</title>
     <link href="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_css/net_stcode.css?v=1.1" rel="stylesheet">
+    <script src="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_js/net_stcode.js?v=1.1"></script>
 </head>
 <body>
 <style type="text/css">
@@ -25,13 +26,14 @@
 	</table>
 	<p>&nbsp; </p>
 	
-	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" /><!--必须有！！！-->
+	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" /><!--商户服务器使用该id值做验证-->
 	
 	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" /><!-- class="stcodeBtn"有点击事件监听，不要改名哦 -->
 </form>
 
 <div style="width:300px; margin:0 auto;">
 <?php
+	//处理客户提交的表单请求
 	if(isset($_POST['user_name']))
 	{
 		$user_name		= $_POST['user_name'];
@@ -46,7 +48,7 @@
 		$result	= json_decode($result, true);
 		if($result['status'] == 1)
 		{
-			//执行数据库操作...
+			//验证通过, 执行数据库、短信发送等操作...
 		}
 		else
 		{
@@ -60,7 +62,7 @@
 //获取拼图验证码url，支持.jsp .asp .aspx等所有编程语言
 var netStCodeUrl	= '/net_stcode.php';
 
-//拼图成功后会执行 stcodeSuccess() 函数
+//客户端完成拼图后会触发 stcodeSuccess() 函数
 function stcodeSuccess()
 {
 	if(!document.getElementsByName('user_name')[0].value)
@@ -73,7 +75,7 @@ function stcodeSuccess()
 	document.testForm.submit();
 }
 </script>
-<script src="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_js/net_stcode.js?v=1.1"></script>
+
 
 </body>
 </html>
