@@ -3,9 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>滑动拼图完成验证接口 - 测试</title>
-    <link href="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_css/net_stcode.css?v=1.1" rel="stylesheet">
-    <script src="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_js/net_stcode.js?v=1.1"></script>
+    <title>滑动拼图完成验证接口 - 示例</title>
+    <!--link href="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_css/net_stcode.css" rel="stylesheet">
+    <script src="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_js/net_stcode.js"></script-->
+    <link href="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_css/net_stcode_v1.1.css" rel="stylesheet">
+    <script src="http://jiayyy.oss-cn-shanghai.aliyuncs.com/common_js/net_stcode_v1.1.js"></script>
 </head>
 <body>
 <style type="text/css">
@@ -29,6 +31,7 @@
 	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" /><!--商户服务器使用该id值做验证-->
 	
 	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" /><!-- class="stcodeBtn"有点击事件监听，不要改名哦 -->
+	<a href="javascript:void(0);" onclick="$('.stcodeBtn').click();">点这里也能提交</a>
 </form>
 
 <div style="width:300px; margin:0 auto;">
@@ -52,7 +55,7 @@
 		}
 		else
 		{
-			echo "拼图验证失败: ".$result['message'];
+			echo "拼图验证失败，原因：".$result['message'];
 		}
 	}
 ?>
@@ -75,7 +78,6 @@ function stcodeSuccess()
 	document.testForm.submit();
 }
 </script>
-
 
 </body>
 </html>
