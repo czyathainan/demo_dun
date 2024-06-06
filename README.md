@@ -6,7 +6,7 @@
 
 ****
 
-1.客户端提交表单到商户服务器后，需要商户服务器使用如下接口二次验证客户端提交是否合法请求（注意stcode_duplikey不支持重复验证）: 
+1.客户端提交表单到商户服务器后，需要商户服务器使用如下接口二次验证客户端提交是否合法请求（注意stcode_duplikey值只能使用一次）: 
 
 ```
 https://api.jiayyy.com/v1/dun/validate?stcode_duplikey=客户端唯一id
