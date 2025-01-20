@@ -1,3 +1,5 @@
+[<img src="https://api.gitsponsors.com/api/badge/img?id=213867925" height="30">](https://api.gitsponsors.com/api/badge/link?p=Pja+tAdEfpvPzqlMjnMY6GN3sVFBqwHpfq1i/bkuHgflURLOTMe2GIu9/687vgXGaf+7IPsk1ipeP91K1KOdIds0iP0GNZ+8zPckkjJj6Ah/cxeqStUyk5cIAxP57T/Yw6GRDly+gImp4O2PvB0uYw==)
+
 #### 【滑动拼图验证码】拼图滑块验证码，比传统数字验证码更安全，更方便使用，可用于防暴力破解登录、防短信恶刷、防灌水等场景；
 
 请将 net_stcode.php 文件放到你网站的根目录下，否则验证码图片会无法显示；
