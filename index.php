@@ -31,7 +31,7 @@
 	<input type="hidden" name="stcodeDuplikey" value="<?=$randString;?>" /><!--商户服务器使用该id值做验证-->
 	
 	<input type="button" value="提 交" class="stcodeBtn" style="display:block; margin:0 auto;" /><!-- class="stcodeBtn"有点击事件监听，不要改名哦 -->
-	<a href="javascript:void(0);" onclick="$('.stcodeBtn').click();">点这里也能提交</a>
+	<a href="javascript:void(0);" onclick="document.getElementsByClassName('stcodeBtn')[0].click();">点这里也能提交</a>
 </form>
 
 <div style="width:300px; margin:0 auto;">
