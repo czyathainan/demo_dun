@@ -62,9 +62,6 @@
 </div>
 
 <script type="text/javascript">
-//获取拼图验证码url，支持.jsp .asp .aspx等所有编程语言
-var netStCodeUrl	= '/net_stcode.php';
-
 //客户端完成拼图后会触发 stcodeSuccess() 函数
 function stcodeSuccess()
 {

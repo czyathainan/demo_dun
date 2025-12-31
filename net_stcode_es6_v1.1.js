@@ -81,7 +81,7 @@ var stcode = {
     _result:false,
     _err_c:0,
     _onsuccess:null, 
-    netStCodeImgUrl: '/net_stcode.php', 
+    netStCodeImgUrl: 'https://api.jiayyy.com/v1/dun/net-stcode', 
     stcodeSuccess: function(){ console.log('stcodeSuccess方法未初始化') }, 
     _bind:function(elm,evType,fn){
         if(!elm){ return }
@@ -361,6 +361,7 @@ var stcode = {
         obj = document.getElementsByClassName('stcode_canvas_mark')[0];
         obj.style.display="none";
         stcode._img = new Image();
+        stcode._img.crossOrigin = "Anonymous";	//支持跨域
 		/*var img_url	= typeof(netStCodeUrl)!='undefined' ? netStCodeUrl : "/net_stcode.php";
 			img_url	+= "?t="+Math.random()+"&stcode_duplikey="+stcodeDuplikey;
         if(!isSupportWebp){
@@ -393,7 +394,7 @@ var stcode = {
     },
     init:function(){
         var _this = this;
-        if(!stcode._img){
+        if(!stcode._img || 1){  //1解决router.push返回后不刷新页面无法展现滑块问题
             stcode._html();
             var obj = document.getElementsByClassName('slide_block')[0];
             stcode._bind(obj,'mousedown',_this._block_start_move);
