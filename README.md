@@ -54,7 +54,6 @@ export default {
 	}
 	,mounted(){
 		stcode.init()
-		stcode.netStCodeImgUrl	= '/v1/dun/net-stcode'	//拼图路径, 你需要将 net_stcode.php 重命名为 index.php 后放置到 /public/v1/dun/ 下
 		stcode.stcodeSuccess = function(){				//客户端拼图成功会触发该函数
 			alert('拼图验证成功，发送网络请求验证用户名和密码...')
 			console.log('发送网络请求验证用户名和密码')
@@ -93,21 +92,6 @@ export default {
 ```
 
 
-此外你需要改下 vue.config.js , 配置代理解决跨域图片无法绘制的问题, 示例如下：
-```
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true, 
-  devServer: {
-    proxy: {
-      //解决canvas绘图无法操作跨域图片的问题
-      '/v1/dun/net-stcode': {
-        target: 'https://api.jiayyy.com', //目标跨域服务器, 客户端请求“/v1/dun/net-stcode”会转到“https://api.jiayyy.com/v1/dun/net-stcode”
-        changeOrigin: true
-      }
-    }
-  }
-})
 ```
 
 
